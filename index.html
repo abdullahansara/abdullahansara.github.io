@@ -3,73 +3,561 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abdullah Ansar</title>
+  <title>Abdullah Ansar | Philosophy, Cognitive Science, Islamic Intellectual History</title>
+  <meta name="description" content="Academic website of Abdullah Ansar, working at the intersection of philosophy, cognitive science, Qurʾanic orality, memory studies, and Islamic intellectual history." />
   <style>
+    :root {
+      --bg: #f5f1e8;
+      --paper: #fbf8f2;
+      --ink: #1f2430;
+      --muted: #5f675f;
+      --line: #d9d1c3;
+      --accent: #234b63;
+      --accent-2: #7a5c2e;
+      --soft: #e9e1d4;
+      --shadow: 0 10px 30px rgba(31, 36, 48, 0.08);
+      --max: 1080px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
     body {
-      font-family: Georgia, serif;
-      max-width: 800px;
-      margin: 60px auto;
-      padding: 0 20px;
-      line-height: 1.7;
-      color: #222;
-      background: #fafafa;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(122, 92, 46, 0.08), transparent 28%),
+        radial-gradient(circle at top right, rgba(35, 75, 99, 0.08), transparent 22%),
+        var(--bg);
+      line-height: 1.75;
     }
-    h1 {
-      margin-bottom: 0.2em;
-    }
-    .subtitle {
-      color: #555;
-      margin-bottom: 2em;
-    }
-    h2 {
-      margin-top: 2em;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 0.3em;
-    }
-    ul {
-      padding-left: 20px;
-    }
+
     a {
-      color: #1a4ea1;
+      color: var(--accent);
       text-decoration: none;
     }
-    a:hover {
-      text-decoration: underline;
+
+    a:hover { text-decoration: underline; }
+
+    .container {
+      width: min(var(--max), calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+      background: rgba(251, 248, 242, 0.9);
+      border-bottom: 1px solid rgba(217, 209, 195, 0.85);
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.95rem 0;
+    }
+
+    .brand {
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: flex-end;
+    }
+
+    nav a {
+      font-size: 0.98rem;
+      color: var(--ink);
+      padding-bottom: 0.15rem;
+      border-bottom: 1px solid transparent;
+    }
+
+    nav a:hover {
+      border-color: var(--accent-2);
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 5.5rem 0 4rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.45fr 0.95fr;
+      gap: 2rem;
+      align-items: stretch;
+    }
+
+    .hero-card,
+    .panel,
+    .feature,
+    .timeline-item,
+    .publication,
+    .contact-card {
+      background: rgba(251, 248, 242, 0.86);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      border-radius: 24px;
+    }
+
+    .hero-card {
+      padding: 2.5rem;
+    }
+
+    .hero-kicker {
+      display: inline-block;
+      color: var(--accent-2);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.78rem;
+      margin-bottom: 1rem;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.2;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 4.2vw, 4.4rem);
+      margin-bottom: 0.8rem;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero p {
+      font-size: 1.06rem;
+      margin: 0 0 1rem;
+      max-width: 64ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-top: 1.6rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.9rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      font-weight: 700;
+      font-size: 0.98rem;
+      transition: 0.2s ease;
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      color: var(--accent);
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .panel {
+      padding: 1.4rem 1.3rem;
+    }
+
+    .panel h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.75rem;
+      color: var(--accent);
+    }
+
+    .mini-list {
+      margin: 0;
+      padding-left: 1.1rem;
+    }
+
+    .mini-list li {
+      margin-bottom: 0.45rem;
+    }
+
+    section {
+      padding: 1.1rem 0 0;
+      scroll-margin-top: 90px;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 1rem;
+      margin-bottom: 1.35rem;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(1.7rem, 2.3vw, 2.4rem);
+      letter-spacing: -0.02em;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 44ch;
+    }
+
+    .about-grid,
+    .research-grid,
+    .pub-grid,
+    .contact-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .about-grid {
+      grid-template-columns: 1.2fr 0.8fr;
+    }
+
+    .research-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .pub-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .feature,
+    .publication,
+    .contact-card {
+      padding: 1.5rem;
+    }
+
+    .feature h3,
+    .publication h3,
+    .contact-card h3 {
+      margin-bottom: 0.8rem;
+      font-size: 1.15rem;
+      color: var(--accent);
+    }
+
+    .feature p,
+    .publication p,
+    .contact-card p,
+    .panel p {
+      margin: 0;
+      color: var(--ink);
+    }
+
+    .feature .tag,
+    .publication .tag {
+      display: inline-block;
+      margin-bottom: 0.9rem;
+      padding: 0.28rem 0.65rem;
+      background: var(--soft);
+      border-radius: 999px;
+      font-size: 0.78rem;
+      color: var(--accent-2);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 700;
+    }
+
+    .about-copy {
+      padding: 1.7rem;
+    }
+
+    .about-copy p {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    .facts {
+      display: grid;
+      gap: 0.85rem;
+      padding: 1.25rem;
+    }
+
+    .fact {
+      padding: 1rem 1.05rem;
+      background: var(--paper);
+      border-radius: 16px;
+      border: 1px solid var(--line);
+    }
+
+    .fact strong {
+      display: block;
+      margin-bottom: 0.25rem;
+      color: var(--accent);
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .timeline-item {
+      padding: 1.25rem 1.4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 6px;
+      background: linear-gradient(180deg, var(--accent), var(--accent-2));
+    }
+
+    .timeline-item .year {
+      display: inline-block;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-2);
+      margin-bottom: 0.45rem;
+      font-weight: 700;
+    }
+
+    .timeline-item h3 {
+      margin-bottom: 0.55rem;
+      font-size: 1.1rem;
+      padding-left: 0.1rem;
+    }
+
+    .publication p.meta {
+      margin-bottom: 0.75rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .footer {
+      padding: 3rem 0 4rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid,
+      .about-grid,
+      .research-grid,
+      .pub-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding-top: 4rem; }
+      .hero-card { padding: 1.5rem; }
+      h1 { font-size: 2.35rem; }
+      .section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .btn { width: 100%; }
+      .hero-actions { flex-direction: column; }
     }
   </style>
 </head>
 <body>
-  <h1>Abdullah Ansar</h1>
-  <p class="subtitle">Philosophy & Cognitive Science</p>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">Abdullah Ansar</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#writing">Writing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  <h2>About</h2>
-  <p>
-    I work at the intersection of philosophy, cognitive science, and Islamic intellectual history.
-    My research focuses on Qurʾānic orality, memory, recitation, and the philosophical traditions of the Islamic world.
-  </p>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <article class="hero-card">
+          <div class="hero-kicker">Academic Homepage</div>
+          <h1>Abdullah Ansar</h1>
+          <div class="hero-subtitle">Philosophy, Cognitive Science, and Islamic Intellectual History</div>
+          <p>
+            I work at the intersection of philosophy, cognition, religion, and textual transmission, with a particular focus on Qurʾānic orality, memory studies, recitation, and the intellectual traditions of Islam.
+          </p>
+          <p>
+            This site brings together my research interests, current projects, developing publications, and reflections on oral tradition, philosophical inquiry, scriptural transmission, and the history of ideas.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#publications">View Publications</a>
+            <a class="btn secondary" href="#contact">Get in Touch</a>
+          </div>
+        </article>
 
-  <h2>Research Interests</h2>
-  <ul>
-    <li>Qurʾānic orality and transmission</li>
-    <li>Memory and cognition</li>
-    <li>Islamic philosophy</li>
-    <li>Early Shiʿi intellectual history</li>
-    <li>Religion and politics</li>
-  </ul>
+        <div class="hero-side">
+          <section class="panel">
+            <h3>Research Areas</h3>
+            <ul class="mini-list">
+              <li>Qurʾānic orality and variant readings</li>
+              <li>Memory, recitation, and extended cognition</li>
+              <li>Islamic philosophy and intellectual history</li>
+              <li>Early Shiʿi thought and textual traditions</li>
+              <li>Religion, politics, and modernity</li>
+            </ul>
+          </section>
 
-  <h2>Publications</h2>
-  <p>Publications and working papers will appear here.</p>
+          <section class="panel">
+            <h3>Current Focus</h3>
+            <p>
+              Ongoing work includes research on dynamic recitation, oral memory systems, early Shiʿi discourses, and the conceptual relationship between textual stability and living recitational traditions.
+            </p>
+          </section>
 
-  <h2>Projects</h2>
-  <ul>
-    <li><strong>The Dynamic Recitation</strong> — Study of Qurʾānic oral transmission and variant readings</li>
-    <li>Research on memory and recitation traditions</li>
-  </ul>
+          <section class="panel">
+            <h3>Site Notes</h3>
+            <p>
+              This homepage is designed as a clean academic profile. You can later add a CV PDF, external publication links, blog posts, conference talks, and a dedicated teaching page without changing the overall structure.
+            </p>
+          </section>
+        </div>
+      </div>
+    </section>
 
-  <h2>Blog</h2>
-  <p>Research notes and reflections will appear here.</p>
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <h2>About</h2>
+          <p>A concise intellectual portrait with room to grow into a fuller academic biography.</p>
+        </div>
+        <div class="about-grid">
+          <article class="hero-card about-copy">
+            <p>
+              My work is driven by questions at the boundary of text and voice, memory and inscription, metaphysics and historical process. I am particularly interested in how oral traditions preserve, transform, and authorize meaning across generations.
+            </p>
+            <p>
+              Much of my research centers on the Qurʾān as a lived recitational phenomenon rather than only as a stabilized written object. This interest connects naturally to broader philosophical questions about cognition, embodiment, communal memory, and the formation of interpretive traditions.
+            </p>
+            <p>
+              I also work on Islamic philosophy, early Shiʿi intellectual history, and the relationship between religion and politics in both classical and modern contexts. Across these fields, I am interested in how conceptual traditions remain intellectually alive through repetition, commentary, ritual, and disciplined study.
+            </p>
+          </article>
 
-  <h2>Contact</h2>
-  <p>Email: your-email@example.com</p>
-</body>
-</html>
+          <aside class="hero-card facts">
+            <div class="fact">
+              <strong>Primary Fields</strong>
+              Philosophy, cognitive science, Islamic studies, intellectual history
+            </div>
+            <div class="fact">
+              <strong>Core Themes</strong>
+              Orality, memory, recitation, transmission, hermeneutics
+            </div>
+            <div class="fact">
+              <strong>Methods</strong>
+              Conceptual analysis, historical interpretation, comparative inquiry
+            </div>
+            <div class="fact">
+              <strong>Ongoing Aim</strong>
+              Building bridges between philosophy of mind, oral tradition, and Islamic intellectual history
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Research Themes</h2>
+          <p>Selected areas that organize the broader arc of the site and can later become separate pages.</p>
+        </div>
+        <div class="research-grid">
+          <article class="feature">
+            <div class="tag">Qurʾānic Studies</div>
+            <h3>Orality and Recitation</h3>
+            <p>
+              Investigating the Qurʾān through recitational practice, oral memory, and the emergence of variant readings, with attention to the dynamic relation between preservation and performance.
+            </p>
+          </article>
+
+          <article class="feature">
+            <div class="tag">Cognitive Inquiry</div>
+            <h3>Memory and Extended Mind</h3>
+            <p>
+              Exploring how repetition, embodiment, communal discipline, and musicality support durable memory systems, especially in traditions that rely on oral transmission.
+            </p>
+          </article>
+
+          <article class="feature">
+            <div class="tag">Islamic Philosophy</div>
+            <h3>Metaphysics and Intellectual History</h3>
+            <p>
+              Studying Islamic philosophical traditions and their conceptual developments, including questions of meaning, knowledge, being, and the transmission of wisdom across eras.
+            </p>
+          </article>
+
+          <article class="feature">
+            <div class="tag">Shiʿi Studies</div>
+            <h3>Early Shiʿi Discourses</h3>
+            <p>
+              Examining formative Shiʿi materials, doctrinal development, messianic themes, moral philosophy, and the role of transmitted reports in shaping intellectual identity.
+            </p>
+          </article>
+
+          <article class="feature">
+            <div class="tag">Comparative Thought</div>
+            <h3>Text, Voice, and Authority</h3>
+            <p>
+              Comparing how traditions negotiate the relationship between written fixation and living interpretation, especially where communal recitation sustains claims to authenticity.
+            </p>
+          </article>
+
+          <article class="feature">
+            <div class="tag">Religion and Politics</div>
+            <h3>Modernity and Ideological Formation</h3>
+            <p>
