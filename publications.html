@@ -1,75 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Publications – Abdullah Ansar</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications | Abdullah Ansar</title>
+  <meta name="description" content="Publications, essays, chapters, and academic projects by Abdullah Ansar." />
+  <style>
+    :root {
+      --bg: #f5f1e8;
+      --paper: #fbf8f2;
+      --ink: #1f2430;
+      --muted: #5f675f;
+      --line: #d9d1c3;
+      --accent: #234b63;
+      --accent-2: #7a5c2e;
+      --soft: #e9e1d4;
+      --shadow: 0 10px 30px rgba(31, 36, 48, 0.08);
+      --max: 1080px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(251, 248, 242, 0.92);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      gap: 20px;
+    }
+
+    .site-title {
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: var(--ink);
+      font-size: 0.96rem;
+    }
+
+    .page-hero {
+      padding: 72px 0 30px;
+    }
+
+    .hero-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      border-radius: 18px;
+      padding: 38px 32px;
+    }
+
+    .hero-kicker {
+      color: var(--accent-2);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.78rem;
+      margin-bottom: 12px;
+    }
+
+    h1, h2, h3 {
+      margin-top: 0;
+      line-height: 1.2;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 4vw, 3.2rem);
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-size: 1.45rem;
+      margin-bottom: 18px;
+      color: var(--accent);
+    }
+
+    .intro {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .section {
+      padding: 18px 0 56px;
+    }
+
+    .section-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 30px 28px;
+    }
+
+    .pub-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .pub-item {
+      padding: 20px 20px;
+      background: #fffdf9;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    .pub-item p {
+      margin: 0;
+    }
+
+    .pub-item .meta {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 0 40px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-card,
+      .section-card {
+        padding: 24px 20px;
+      }
+
+      .pub-item {
+        padding: 18px 16px;
+      }
+    }
+  </style>
 </head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-title">Abdullah Ansar</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="publications.html">Publications</a>
+      </nav>
+    </div>
+  </header>
 
-<body style="font-family:Arial, sans-serif; max-width:800px; margin:40px auto; line-height:1.7;">
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="hero-card">
+          <div class="hero-kicker">Research and Writing</div>
+          <h1>Publications</h1>
+          <p class="intro">
+            This page gathers published articles, collaborative works, public writing, and major academic projects in philosophy, cognitive science, Islamic intellectual history, Qurʾānic studies, and related fields.
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <h1>Publications</h1>
+    <section class="section">
+      <div class="container">
+        <div class="section-card">
+          <h2>Articles and Chapters</h2>
+          <div class="pub-list">
+            <div class="pub-item">
+              <p>Ansar, Abdullah. “The Law of the Imām: Realist Particularism and Proto-Uṣūlism in Formative Shīʿī Islam.” <em>Islamic Law and Society</em> (published online ahead of print, 2025).</p>
+            </div>
 
-  <p><a href="index.html">← Back to Home</a></p>
+            <div class="pub-item">
+              <p>Andani, Khalil. “Chapter 32 ‘Yā Muḥammad, yā ʿAlī’: Istighātha in Islamic Thought and Practice.” In <em>I of the Heart</em>. Leiden, The Netherlands: Brill, 2025.</p>
+              <p class="meta">Research Assistant: Abdullah Ansar</p>
+            </div>
 
-  <h2>Articles and Chapters</h2>
+            <div class="pub-item">
+              <p>Andani, Khalil, and Abdullah Ansar. “Ya Muhammad Madad: Sunni Scholars Who Permit Istighatha (Intercessory Prayer).” <em>Substack</em>, December 21, 2024.</p>
+              <p class="meta"><a href="https://substack.com/home/post/p-153472233" target="_blank" rel="noopener noreferrer">Read online</a></p>
+            </div>
 
-  <ul>
+            <div class="pub-item">
+              <p>Ansar, Abdullah. “Enlightened by One Lamp.” <em>HMML Stories</em>, December 12, 2024.</p>
+              <p class="meta"><a href="https://hmml.org/stories/enlightened-by-one-lamp/" target="_blank" rel="noopener noreferrer">Read online</a></p>
+            </div>
 
-    <li>
-      Ansar, Abdullah. “The Law of the Imām: Realist Particularism and Proto-Uṣūlism in Formative Shīʿī Islam.” 
-      <i>Islamic Law and Society</i> (published online ahead of print, 2025).
-    </li>
+            <div class="pub-item">
+              <p>Haider, Shahbaz, Abdullah Ansar, and Syed Ali Asdaq Naqvi. “Shīʿī Imāmī Thought on Existence, Life, and Extraterrestrials.” <em>Theology and Science</em> 21, no. 2 (2023): 261–272.</p>
+            </div>
 
-    <li>
-      Andani, Khalil. “Chapter 32 ‘Yā Muḥammad, yā ʿAlī’: Istighātha in Islamic Thought and Practice.” 
-      In <i>I of the Heart</i> (Leiden: Brill, 2025). 
-      <b>(Research Assistant: Abdullah Ansar)</b>
-    </li>
+            <div class="pub-item">
+              <p>Ansar, Abdullah, and Shahbaz Haider. “A Broader Perspective on ‘Humans’: Analysis of Insān in Twelver Shīʿī Philosophy and Implications for Astrotheology.” <em>Zygon</em> 58, no. 4 (2023): 838–859.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <li>
-      Andani, Khalil, and Abdullah Ansar. 
-      “Ya Muhammad Madad: Sunni Scholars Who Permit Istighatha (Intercessory Prayer).” 
-      Substack, December 21, 2024. 
-      <a href="https://substack.com/home/post/p-153472233" target="_blank">Link</a>
-    </li>
+    <section class="section">
+      <div class="container">
+        <div class="section-card">
+          <h2>Theses and Major Projects</h2>
+          <div class="pub-list">
+            <div class="pub-item">
+              <p>Ansar, Abdullah. “The Jurist Par Excellence: Debating Khomeini’s Political Thought and Its Philosophical Roots.” Carleton Comprehensive Project; Final Year Thesis in Philosophy.</p>
+            </div>
 
-    <li>
-      Ansar, Abdullah. “Enlightened by One Lamp.” 
-      HMML Stories, December 12, 2024. 
-      <a href="https://hmml.org/stories/enlightened-by-one-lamp/" target="_blank">Link</a>
-    </li>
+            <div class="pub-item">
+              <p>Ansar, Abdullah. “Remembrance and Limitation: Oral Traditions, Memory and Verbatim Recall in Early Islam.” Carleton Comprehensive Project; Final Year Thesis in Cognitive Science.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <li>
-      Haider, Shahbaz, Abdullah Ansar, and Syed Ali Asdaq Naqvi. 
-      “Shīʿī Imāmī Thought on Existence, Life, and Extraterrestrials.” 
-      <i>Theology and Science</i> 21, no. 2 (2023): 261–272.
-    </li>
-
-    <li>
-      Ansar, Abdullah, and Shahbaz Haider. 
-      “A Broader Perspective on ‘Humans’: Analysis of Insān in Twelver Shīʿī Philosophy and Implications for Astrotheology.” 
-      <i>Zygon</i> 58, no. 4 (2023): 838–859.
-    </li>
-
-  </ul>
-
-  <h2>Theses and Projects</h2>
-
-  <ul>
-
-    <li>
-      Ansar, Abdullah. 
-      “The Jurist Par Excellence: Debating Khomeini’s Political Thought and Its Philosophical Roots.” 
-      (Carleton Comprehensive Project; Final Year Thesis in Philosophy).
-    </li>
-
-    <li>
-      Ansar, Abdullah. 
-      “Remembrance and Limitation: Oral Traditions, Memory and Verbatim Recall in Early Islam.” 
-      (Carleton Comprehensive Project; Final Year Thesis in Cognitive Science).
-    </li>
-
-  </ul>
-
+  <footer class="footer">
+    <div class="container">
+      © Abdullah Ansar
+    </div>
+  </footer>
 </body>
 </html>
