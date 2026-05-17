@@ -1,0 +1,19 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</div>
+    <div class="link-list">
+      {% if site.data.settings.substack_url and site.data.settings.substack_url != "" %}
+      <a href="{{ site.data.settings.substack_url }}">Substack</a>
+      {% endif %}
+      {% if site.data.settings.google_scholar_url and site.data.settings.google_scholar_url != "" %}
+      <a href="{{ site.data.settings.google_scholar_url }}">Google Scholar</a>
+      {% endif %}
+      {% if site.data.settings.orcid_url and site.data.settings.orcid_url != "" %}
+      <a href="{{ site.data.settings.orcid_url }}">ORCID</a>
+      {% endif %}
+      {% if site.data.settings.linkedin_url and site.data.settings.linkedin_url != "" %}
+      <a href="{{ site.data.settings.linkedin_url }}">LinkedIn</a>
+      {% endif %}
+    </div>
+  </div>
+</footer>

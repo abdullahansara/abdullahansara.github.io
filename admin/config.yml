@@ -1,0 +1,91 @@
+backend:
+  name: github
+  repo: abdullahansara/abdullahansara.github.io
+  branch: main
+
+publish_mode: editorial_workflow
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+site_url: "https://abdullahansara.github.io"
+display_url: "https://abdullahansara.github.io"
+logo_url: "/images/profile.jpg"
+
+collections:
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "blog/{{year}}/{{month}}/{{day}}/{{slug}}/"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string", default: "Abdullah Ansar" }
+      - { label: "Excerpt", name: "excerpt_text", widget: "text", required: false }
+      - { label: "Featured Image", name: "featured_image", widget: "image", required: false }
+      - { label: "Featured Image Alt Text", name: "featured_image_alt", widget: "string", required: false }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "publications"
+    label: "Publications"
+    folder: "_publications"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Authors", name: "authors", widget: "string" }
+      - { label: "Year", name: "year", widget: "number", required: false, value_type: "int" }
+      - { label: "Venue", name: "venue", widget: "string", required: false }
+      - { label: "Type", name: "type", widget: "select", options: ["Article", "Book Chapter", "Public Essay", "Thesis", "Working Paper", "Talk", "Other"], default: "Article" }
+      - { label: "Selected on Homepage", name: "selected", widget: "boolean", default: false }
+      - { label: "External URL", name: "external_url", widget: "string", required: false }
+      - { label: "PDF", name: "pdf", widget: "file", required: false, media_folder: "assets/pdfs", public_folder: "/assets/pdfs" }
+      - { label: "DOI", name: "doi", widget: "string", required: false }
+      - { label: "Abstract or Note", name: "body", widget: "markdown", required: false }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "about.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Permalink", name: "permalink", widget: "hidden", default: "/about/" }
+          - { label: "Kicker", name: "kicker", widget: "string", required: false }
+          - { label: "Description", name: "description", widget: "text", required: false }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "site_data"
+    label: "Site Content"
+    files:
+      - label: "Homepage"
+        name: "homepage"
+        file: "_data/home.yml"
+        fields:
+          - { label: "Kicker", name: "kicker", widget: "string" }
+          - { label: "Headline", name: "headline", widget: "string" }
+          - { label: "Deck", name: "deck", widget: "text" }
+          - { label: "Profile Note", name: "profile_note", widget: "text" }
+          - { label: "Research Intro", name: "research_intro", widget: "text" }
+          - label: "Research Themes"
+            name: "themes"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+      - label: "Site Settings"
+        name: "settings"
+        file: "_data/settings.yml"
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Role", name: "role", widget: "string" }
+          - { label: "Email", name: "email", widget: "string", required: false }
+          - { label: "Substack URL", name: "substack_url", widget: "string", required: false }
+          - { label: "Google Scholar URL", name: "google_scholar_url", widget: "string", required: false }
+          - { label: "ORCID URL", name: "orcid_url", widget: "string", required: false }
+          - { label: "LinkedIn URL", name: "linkedin_url", widget: "string", required: false }
