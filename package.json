@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "payload": "payload",
+    "seed": "tsx scripts/seed.ts",
     "generate:types": "payload generate:types",
     "generate:importmap": "payload generate:importmap"
   },
@@ -16,6 +20,7 @@
     "@payloadcms/next": "^3.84.1",
     "@payloadcms/richtext-lexical": "^3.84.1",
     "@payloadcms/storage-s3": "^3.84.1",
+    "dotenv": "^17.4.2",
     "graphql": "^16.12.0",
     "next": "15.4.11",
     "payload": "^3.84.1",
@@ -29,6 +34,7 @@
     "@types/react-dom": "^19.2.0",
     "eslint": "^9.39.0",
     "eslint-config-next": "15.4.11",
+    "tsx": "^4.20.6",
     "typescript": "^5.9.3"
   }
 }
