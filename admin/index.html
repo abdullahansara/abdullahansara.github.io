@@ -4,8 +4,130 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Content Admin | Abdullah Ansar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg: #f7f4ef;
+        --paper: #fffaf3;
+        --ink: #202020;
+        --muted: #6d6861;
+        --line: #ddd5ca;
+        --accent: #b3442d;
+        --accent-strong: #8f2f21;
+        --orange: #d9792b;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Inter", system-ui, sans-serif;
+        line-height: 1.6;
+      }
+
+      body::before {
+        content: "";
+        display: block;
+        height: 5px;
+        background: linear-gradient(90deg, var(--accent-strong), var(--orange), #343434);
+      }
+
+      .admin-fallback {
+        width: min(920px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 54px 0;
+      }
+
+      h1, h2 {
+        font-family: "EB Garamond", Georgia, serif;
+        line-height: 1.1;
+      }
+
+      h1 {
+        max-width: 720px;
+        margin: 0 0 12px;
+        font-size: clamp(2.5rem, 7vw, 5rem);
+      }
+
+      p { color: var(--muted); margin: 0 0 18px; }
+
+      .panel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--paper);
+        padding: 22px;
+        margin-top: 22px;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 16px;
+      }
+
+      a.button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        border: 1px solid var(--accent);
+        border-radius: 4px;
+        padding: 0 15px;
+        background: var(--accent);
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      a.button.secondary {
+        background: transparent;
+        color: var(--accent);
+      }
+
+      code {
+        border: 1px solid var(--line);
+        background: #fff;
+        border-radius: 4px;
+        padding: 2px 5px;
+      }
+    </style>
   </head>
   <body>
+    <div class="admin-fallback" id="admin-help">
+      <p style="color: var(--accent); font-weight: 800; letter-spacing: .12em; text-transform: uppercase;">Content admin</p>
+      <h1>Backend Editing</h1>
+      <p>The visual CMS is loading below. If login does not complete, the GitHub Pages version still needs a Decap CMS OAuth handler connected.</p>
+
+      <div class="panel">
+        <h2>Direct Editing Links</h2>
+        <p>These links work immediately when you are signed into the GitHub account that owns the repository.</p>
+        <div class="actions">
+          <a class="button" href="https://github.com/abdullahansara/abdullahansara.github.io/new/main/_posts">New Blog Post</a>
+          <a class="button secondary" href="https://github.com/abdullahansara/abdullahansara.github.io/tree/main/_publications">Edit Publications</a>
+          <a class="button secondary" href="https://github.com/abdullahansara/abdullahansara.github.io/edit/main/_data/home.yml">Edit Homepage</a>
+          <a class="button secondary" href="https://github.com/abdullahansara/abdullahansara.github.io/edit/main/about.md">Edit About</a>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Visual CMS</h2>
+        <p>Decap CMS is configured at <code>/admin/config.yml</code>. Full browser login requires a GitHub OAuth provider, because GitHub Pages is static and cannot run that auth step by itself.</p>
+      </div>
+    </div>
+
+    <script>
+      window.CMS_MANUAL_INIT = true;
+    </script>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      if (window.CMS) {
+        CMS.init();
+      }
+    </script>
   </body>
 </html>

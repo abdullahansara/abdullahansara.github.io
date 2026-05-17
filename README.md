@@ -23,3 +23,5 @@ branch: main
 ```
 
 To make browser login work on the live site, configure Decap CMS GitHub authentication with an OAuth provider or host through a service such as Netlify with Identity/Git Gateway.
+
+Until OAuth is connected, `/admin/` also includes direct GitHub editing links for posts, publications, homepage text, and the about page.
