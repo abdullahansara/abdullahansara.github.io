@@ -9,3 +9,5 @@ build
 payload-types.ts
 src/payload-generated.schema.ts
 *.log
+
+.vercel
