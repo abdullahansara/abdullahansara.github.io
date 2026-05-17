@@ -1,0 +1,38 @@
+title: Abdullah Ansar
+email: ""
+description: "Philosophy, cognitive science, Islamic intellectual history, and public essays."
+baseurl: ""
+url: "https://abdullahansara.github.io"
+author:
+  name: Abdullah Ansar
+  role: Researcher in philosophy, cognitive science, and Islamic intellectual history
+  email: ""
+  substack_url: ""
+  google_scholar_url: ""
+  orcid_url: ""
+  linkedin_url: ""
+
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+collections:
+  publications:
+    output: false
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: Abdullah Ansar
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: publication
+
+plugins: []
+
+exclude:
+  - README.md

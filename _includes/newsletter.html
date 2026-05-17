@@ -1,0 +1,9 @@
+<aside class="newsletter">
+  <h2>Essays and Updates</h2>
+  <p>Follow new writing on Islamic intellectual history, philosophy, cognition, and public scholarship.</p>
+  {% if site.data.settings.substack_url and site.data.settings.substack_url != "" %}
+  <a class="button" href="{{ site.data.settings.substack_url }}">Subscribe on Substack</a>
+  {% else %}
+  <a class="button" href="{{ '/blog/' | relative_url }}">Read the Blog</a>
+  {% endif %}
+</aside>

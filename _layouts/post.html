@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<article>
+  <header class="page-hero">
+    <div class="readable">
+      <div class="kicker">Essay</div>
+      <h1 class="post-title">{{ page.title }}</h1>
+      <p class="meta">
+        {{ page.date | date: "%B %d, %Y" }}
+        {% if page.author %} by {{ page.author }}{% endif %}
+      </p>
+      {% if page.excerpt_text %}<p>{{ page.excerpt_text }}</p>{% endif %}
+    </div>
+  </header>
+
+  {% if page.featured_image %}
+  <div class="readable" style="padding-top: 28px;">
+    <img src="{{ page.featured_image | relative_url }}" alt="{{ page.featured_image_alt | default: page.title }}">
+  </div>
+  {% endif %}
+
+  <div class="prose readable">
+    {{ content }}
+  </div>
+</article>
