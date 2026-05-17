@@ -9,8 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
       :root {
-        --bg: #f7f4ef;
-        --paper: #fffaf3;
+        --bg: #e9e6df;
+        --paper: #fff9ef;
         --ink: #202020;
         --muted: #6d6861;
         --line: #ddd5ca;
@@ -23,7 +23,9 @@
 
       body {
         margin: 0;
-        background: var(--bg);
+        background:
+          linear-gradient(180deg, #d9d6cf 0, var(--bg) 360px),
+          var(--bg);
         color: var(--ink);
         font-family: "Inter", system-ui, sans-serif;
         line-height: 1.6;
@@ -32,7 +34,7 @@
       body::before {
         content: "";
         display: block;
-        height: 5px;
+        height: 8px;
         background: linear-gradient(90deg, var(--accent-strong), var(--orange), #343434);
       }
 
@@ -57,6 +59,7 @@
 
       .panel {
         border: 1px solid var(--line);
+        border-top: 5px solid var(--accent);
         border-radius: 8px;
         background: var(--paper);
         padding: 22px;

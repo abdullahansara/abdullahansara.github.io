@@ -1,15 +1,15 @@
 :root {
-  --bg: #f7f4ef;
-  --paper: #fffaf3;
-  --ink: #202020;
-  --muted: #6d6861;
-  --line: #ddd5ca;
-  --accent: #b3442d;
-  --accent-strong: #8f2f21;
-  --orange: #d9792b;
-  --rust: #7f3327;
-  --charcoal: #343434;
-  --wash: #eee8df;
+  --bg: #e9e6df;
+  --paper: #fff9ef;
+  --ink: #23211f;
+  --muted: #68625b;
+  --line: #d5ccc0;
+  --accent: #c24a2c;
+  --accent-strong: #8f2d20;
+  --orange: #e07a2f;
+  --rust: #7c2f24;
+  --charcoal: #3a3835;
+  --wash: #f1e7dc;
   --max: 1120px;
   --read: 720px;
   --serif: "EB Garamond", Georgia, "Times New Roman", serif;
@@ -23,7 +23,9 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   color: var(--ink);
-  background: var(--bg);
+  background:
+    linear-gradient(180deg, #d9d6cf 0, var(--bg) 360px),
+    var(--bg);
   font-family: var(--sans);
   font-size: 17px;
   line-height: 1.65;
@@ -32,7 +34,7 @@ body {
 body::before {
   content: "";
   display: block;
-  height: 5px;
+  height: 8px;
   background: linear-gradient(90deg, var(--accent-strong), var(--orange), var(--charcoal));
 }
 
@@ -47,8 +49,8 @@ img { max-width: 100%; height: auto; }
   position: sticky;
   top: 0;
   z-index: 10;
-  border-bottom: 1px solid var(--line);
-  background: rgba(247, 244, 239, 0.95);
+  border-bottom: 1px solid #c9bfb2;
+  background: rgba(233, 230, 223, 0.96);
   backdrop-filter: blur(14px);
 }
 
@@ -69,11 +71,12 @@ img { max-width: 100%; height: auto; }
 
 .brand-name {
   font-family: var(--serif);
-  font-size: 1.15rem;
+  font-size: 1.32rem;
   font-weight: 700;
+  color: var(--accent-strong);
 }
 
-.brand-line { color: var(--muted); font-size: 0.77rem; }
+.brand-line { color: var(--charcoal); font-size: 0.76rem; font-weight: 600; }
 
 .nav {
   display: flex;
@@ -83,12 +86,15 @@ img { max-width: 100%; height: auto; }
   gap: 18px;
 }
 
-.nav a { color: var(--ink); font-size: 0.93rem; }
+.nav a { color: var(--ink); font-size: 0.93rem; font-weight: 700; }
 .nav a:hover { color: var(--accent); text-decoration: none; }
 
 .hero {
-  padding: 56px 0 44px;
-  border-bottom: 1px solid var(--line);
+  padding: 68px 0 52px;
+  border-bottom: 1px solid #c9bfb2;
+  background:
+    linear-gradient(90deg, rgba(194, 74, 44, 0.1), transparent 32%),
+    var(--paper);
 }
 
 .hero-grid {
@@ -116,16 +122,17 @@ h1, h2, h3 {
 h1 {
   max-width: 11ch;
   margin-top: 10px;
-  font-size: clamp(3rem, 8vw, 6.6rem);
+  color: var(--accent-strong);
+  font-size: clamp(3.4rem, 8.8vw, 7.4rem);
   font-weight: 700;
 }
 
 .hero .deck {
   max-width: 760px;
   margin: 18px 0 0;
-  color: #2c2a27;
+  color: #332f2b;
   font-family: var(--serif);
-  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  font-size: clamp(1.32rem, 2.25vw, 1.75rem);
   line-height: 1.55;
 }
 
@@ -143,20 +150,23 @@ h1 {
   min-height: 44px;
   padding: 0 18px;
   border: 1px solid var(--accent);
-  border-radius: 4px;
-  background: var(--accent);
+  border-radius: 3px;
+  background: linear-gradient(180deg, var(--orange), var(--accent));
   color: #fff;
   font-size: 0.95rem;
   font-weight: 700;
 }
 
-.button.secondary { background: transparent; color: var(--accent); }
+.button.secondary { background: #fff9ef; color: var(--accent-strong); }
 .button:hover { background: var(--accent-strong); color: #fff; text-decoration: none; }
 .button.secondary:hover { background: var(--wash); color: var(--accent); }
 
 .profile-panel {
-  border-left: 3px solid var(--accent);
-  padding: 4px 0 4px 22px;
+  border: 1px solid var(--line);
+  border-top: 5px solid var(--orange);
+  border-radius: 8px;
+  background: #f8efe4;
+  padding: 22px;
 }
 
 .profile-panel img {
@@ -184,8 +194,13 @@ h1 {
 }
 
 .section {
-  padding: 48px 0;
-  border-bottom: 1px solid var(--line);
+  padding: 54px 0;
+  border-bottom: 1px solid #d1c8bc;
+  background: rgba(255, 249, 239, 0.48);
+}
+
+.section:nth-of-type(odd) {
+  background: rgba(241, 231, 220, 0.72);
 }
 
 .section-header {
@@ -213,7 +228,8 @@ h1 {
 
 .card {
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-top: 4px solid var(--accent);
+  border-radius: 6px;
   background: var(--paper);
   padding: 22px;
 }
@@ -266,8 +282,9 @@ h1 {
 
 .newsletter {
   border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--wash);
+  border-top: 5px solid var(--accent);
+  border-radius: 6px;
+  background: #f8efe4;
   padding: 22px;
 }
 
@@ -279,12 +296,14 @@ h1 {
 .newsletter p { margin: 0 0 16px; color: var(--muted); }
 
 .page-hero {
-  padding: 48px 0 34px;
-  border-bottom: 1px solid var(--line);
+  padding: 58px 0 42px;
+  border-bottom: 1px solid #c9bfb2;
+  background: var(--paper);
 }
 
 .page-hero h1 {
   max-width: none;
+  color: var(--accent-strong);
   font-size: clamp(2.55rem, 6vw, 4.8rem);
 }
 
