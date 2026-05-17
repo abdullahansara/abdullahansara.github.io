@@ -207,7 +207,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   gap: 24px;
-  align-items: end;
+  align-items: flex-end;
   margin-bottom: 24px;
 }
 

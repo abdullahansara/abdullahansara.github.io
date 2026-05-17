@@ -1,0 +1,11 @@
+node_modules
+.next
+out
+dist
+build
+.env
+.env.local
+.env.*.local
+payload-types.ts
+src/payload-generated.schema.ts
+*.log
