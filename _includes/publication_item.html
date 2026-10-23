@@ -6,6 +6,7 @@
   <div class="link-list">
     {% if include.item.external_url %}<a href="{{ include.item.external_url }}">Read online</a>{% endif %}
     {% if include.item.pdf %}<a href="{{ include.item.pdf | relative_url }}">PDF</a>{% endif %}
+    {% if include.item.urdu_url %}<a href="{{ include.item.urdu_url }}">Urdu translation</a>{% endif %}
     {% if include.item.doi %}<a href="https://doi.org/{{ include.item.doi }}">DOI</a>{% endif %}
   </div>
 </article>

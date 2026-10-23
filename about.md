@@ -3,26 +3,26 @@ layout: page
 title: About
 permalink: /about/
 kicker: Academic Profile
-description: "Intellectual biography of Abdullah Ansar: Qur'anic orality and memory, early Shi'i thought, Islamic philosophy, and cognitive science."
+description: "Abdullah Ansar, Divinity School, University of Chicago: early Shiʿi thought, Islamic intellectual history, oral transmission and memory, and the philosophy of science and religion."
 ---
 
-I am a researcher at the University of Chicago working at the intersection of philosophy, cognitive science, and Islamic intellectual history. I received my B.A. from Carleton College, where I studied Philosophy and Cognitive Science, with additional training in religion, Arabic, and Middle Eastern Studies.
+I am an interdisciplinary researcher at the Divinity School of the University of Chicago. I received my B.A. from Carleton College in Philosophy and Cognitive Science, with additional training in religion, Arabic, and Middle Eastern studies. My work engages the intersections of philosophy, science, and religion.
 
-My academic formation combines classical Islamic training, including memorization of the Qur'an and sustained study of Arabic, hadith, jurisprudence, and philosophy, with contemporary interdisciplinary research in the humanities and cognitive sciences. This dual grounding informs my approach to the study of religion as both a textual and lived tradition.
+My academic formation combines classical Islamic training, including memorization of the Qurʾān and sustained study of Arabic, ḥadīth, jurisprudence, and philosophy, with contemporary work in the humanities and cognitive sciences.
 
-My research focuses on Qur'anic orality, memory, and textual transmission, with particular attention to the interaction between oral and written forms. I examine how practices of recitation, memorization, and transmission shape the emergence of variant readings and the stabilization of scriptural authority.
+A central strand of my research investigates the role of oral transmission, memory, and cognitive architecture in the formation of early Islamic intellectual history. I am especially interested in the theological and metaethical assumptions embedded in Shīʿī esoteric texts, and in how early Muslim thinkers negotiated questions of legal, spiritual, and cosmological authority. I often return to the relationship between ontological hierarchies and jurisprudential reasoning, and to how these conceptual structures shaped the trajectory of Islamic thought.
 
-I also work on early Shi'i intellectual history, Islamic philosophy, and the development of legal and theological thought in formative Islam, especially in relation to Imami doctrine and early usul al-fiqh. More broadly, I am interested in how interpretive traditions emerge, stabilize, and remain intellectually active through practices of transmission, commentary, and disciplined study.
+Methodologically, I work with isnād-cum-matn analysis and, increasingly, with computational tools for hadith networks and textual variation. Beyond the early Shīʿī corpus, I work on Islamic philosophy, including Twelver Shīʿī conceptions of the human and of plural worlds, and on how metaphysical commitments shape scientific inquiry and moral reasoning.
 
-My work has appeared in journals such as *Islamic Law and Society*, *Theology and Science*, and *Zygon*, and I have presented at international conferences including the International Qur'anic Studies Association and the American Academy of Religion.
+My work has appeared in *Islamic Law and Society*, *Theology and Science*, and *Zygon*, and I have presented at the International Qurʾanic Studies Association, the Annual Shīʿī Studies Conference, the American Academy of Religion, and a 2026 conference on the Ghūlāt in formative Shiism.
 
 ## Core Areas
 
-- Qur'anic orality, recitation, and variant readings
-- Memory studies and extended cognition
-- Islamic philosophy and intellectual history
-- Early Shi'i thought and textual traditions
-- Religion, politics, and modernity
+- Early Shīʿī ḥadīth and historical method (ICMA)
+- Imāmī law, authority, and proto-Uṣūlism
+- Ghūlāt literature and early esotericism
+- Oral transmission, memory, and the Qurʾān
+- Islamic philosophy, science, and religion
 
 ## Contact
 

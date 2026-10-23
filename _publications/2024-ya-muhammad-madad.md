@@ -4,7 +4,7 @@ authors: "Khalil Andani and Abdullah Ansar"
 year: 2024
 venue: "Substack"
 type: "Public Essay"
-selected: true
+selected: false
 external_url: "https://substack.com/home/post/p-153472233"
 pdf:
 doi:

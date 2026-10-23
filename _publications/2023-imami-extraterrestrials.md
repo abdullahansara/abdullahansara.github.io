@@ -7,7 +7,7 @@ type: "Article"
 selected: false
 external_url:
 pdf:
-doi:
+doi: "10.1080/14746700.2023.2188372"
 ---
 
-Article on Imami thought, existence, life, and astrotheological questions.
+Brings Shīʿī philosophical and ḥadīth evidence together to argue that the Shīʿī school supports extraterrestrial life and offers a framework for human-extraterrestrial interaction.

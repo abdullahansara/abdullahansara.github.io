@@ -5,9 +5,9 @@ year: 2025
 venue: "Islamic Law and Society"
 type: "Article"
 selected: true
-external_url:
-pdf:
-doi:
+external_url: "https://www.academia.edu/145459382"
+doi: "10.1163/15685195-BJA10081"
+urdu_url: "https://www.academia.edu/168291807"
 ---
 
-Published online ahead of print. This article examines legal reasoning, particularism, and early Imami approaches to authority and normativity in formative Shi'i Islam.
+Examines the "nomian esoteric" strand of the early Jaʿfarī school and its image of the Imām as bearer of legislative authority (al-walāya al-tashrīʿiyya). Presents the Imām as a legal demiurge and proto-Uṣūlī thinker whose meta-ethics resembles Platonic moral realism and realist particularism, and traces the shift in legal epistemology after the Major Occultation.
