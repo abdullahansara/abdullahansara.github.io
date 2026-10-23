@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Welcome: Scholarly Site and Blog"
-date: 2026-05-17 09:00:00 +0000
 author: Abdullah Ansar
 excerpt_text: "A short note introducing this site as a home for academic materials and essays."
 tags:

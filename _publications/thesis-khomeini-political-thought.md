@@ -1,7 +1,7 @@
 ---
 title: "The Jurist Par Excellence: Debating Khomeini's Political Thought and Its Philosophical Roots"
 authors: "Abdullah Ansar"
-year:
+year: ""
 venue: "Carleton Comprehensive Project; Final Year Thesis in Philosophy"
 type: "Thesis"
 selected: false

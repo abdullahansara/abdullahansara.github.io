@@ -1,15 +1,16 @@
+{% assign p = page.url %}
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
       <span class="brand-name">{{ site.title }}</span>
-      <span class="brand-line">Academia and essays</span>
     </a>
     <nav class="nav" aria-label="Main navigation">
-      <a href="{{ '/' | relative_url }}">Home</a>
-      <a href="{{ '/publications/' | relative_url }}">Publications</a>
-      <a href="{{ '/blog/' | relative_url }}">Blog</a>
-      <a href="{{ '/about/' | relative_url }}">About</a>
-      <a href="{{ '/admin/' | relative_url }}">Admin</a>
+      <a href="{{ '/' | relative_url }}"{% if p == '/' %} aria-current="page"{% endif %}>Home</a>
+      <a href="{{ '/research/' | relative_url }}"{% if p contains '/research' %} aria-current="page"{% endif %}>Research</a>
+      <a href="{{ '/publications/' | relative_url }}"{% if p contains '/publications' %} aria-current="page"{% endif %}>Publications</a>
+      <a href="{{ '/cv/' | relative_url }}"{% if p contains '/cv' %} aria-current="page"{% endif %}>CV</a>
+      <a href="{{ '/blog/' | relative_url }}"{% if p contains '/blog' %} aria-current="page"{% endif %}>Writing</a>
+      <a href="{{ '/about/' | relative_url }}"{% if p contains '/about' %} aria-current="page"{% endif %}>About</a>
     </nav>
   </div>
 </header>
