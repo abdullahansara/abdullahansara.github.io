@@ -1,0 +1,11 @@
+<article class="publication-item">
+  <h3>{% if include.item.external_url %}<a href="{{ include.item.external_url }}">{{ include.item.title }}</a>{% else %}{{ include.item.title }}{% endif %}</h3>
+  <div class="meta">{{ include.item.authors }}{% if include.item.venue %}. <em>{{ include.item.venue }}</em>{% endif %}{% if include.item.year and include.item.year != "" %} ({{ include.item.year }}){% endif %}.</div>
+  {% assign body = include.item.content | strip_html | strip %}
+  {% if body != "" %}<p class="abstract">{{ body }}</p>{% endif %}
+  <div class="link-list">
+    {% if include.item.external_url %}<a href="{{ include.item.external_url }}">Read online</a>{% endif %}
+    {% if include.item.pdf %}<a href="{{ include.item.pdf | relative_url }}">PDF</a>{% endif %}
+    {% if include.item.doi %}<a href="https://doi.org/{{ include.item.doi }}">DOI</a>{% endif %}
+  </div>
+</article>

@@ -1,96 +1,57 @@
 ---
 layout: default
 title: Home
-description: "Academic profile and essays by Abdullah Ansar."
+description: "Abdullah Ansar: research on Qur'anic orality and memory, early Shi'i law and theology, Islamic philosophy, and computational approaches to Islamic texts."
 ---
-
+{% assign s = site.data.settings %}
 <section class="hero">
   <div class="container hero-grid">
     <div>
       <div class="kicker">{{ site.data.home.kicker }}</div>
       <h1>{{ site.data.home.headline }}</h1>
-      <p class="deck">
-        {{ site.data.home.deck }}
-      </p>
+      <p class="deck">{{ site.data.home.deck }}</p>
+      <p class="affil">{{ s.affiliation }} &middot; <a href="mailto:{{ s.email }}">{{ s.email }}</a></p>
       <div class="hero-actions">
-        <a class="button" href="{{ '/publications/' | relative_url }}">View Publications</a>
-        <a class="button secondary" href="{{ '/blog/' | relative_url }}">Read Essays</a>
+        <a class="button" href="{{ '/publications/' | relative_url }}">Publications</a>
+        <a class="button secondary" href="{{ '/cv/' | relative_url }}">Curriculum vitae</a>
+        <a class="button secondary" href="{{ '/research/' | relative_url }}">Research</a>
       </div>
     </div>
-
     <aside class="profile-panel">
-      <img src="{{ '/images/profile.jpg' | relative_url }}" alt="Abdullah Ansar">
-      <p>{{ site.data.settings.role }}</p>
-      <p>{{ site.data.home.profile_note }}</p>
-      <div class="link-list">
-        <a href="{{ '/about/' | relative_url }}">About</a>
-        <a href="{{ '/publications/' | relative_url }}">Publications</a>
-        <a href="{{ '/blog/' | relative_url }}">Blog</a>
-      </div>
+      <img src="{{ '/images/profile.jpg' | relative_url }}" alt="Persian miniature painting of two haloed figures in a flowering landscape" width="400" height="400">
     </aside>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-      <div class="section-header">
-        <h2>Research Themes</h2>
-        <p>{{ site.data.home.research_intro }}</p>
-      </div>
-      <div class="grid">
-        {% for theme in site.data.home.themes %}
-        <article class="card">
-          <h3>{{ theme.title }}</h3>
-          <p>{{ theme.description }}</p>
-        </article>
-        {% endfor %}
-      </div>
+    <div class="section-header"><h2>Research</h2><p>{{ site.data.home.research_intro }}</p></div>
+    <div class="grid">
+      {% for theme in site.data.home.themes %}
+      <article class="card"><h3>{{ theme.title }}</h3><p>{{ theme.description }}</p></article>
+      {% endfor %}
+    </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container two-col">
     <div>
-      <div class="section-header">
-        <h2>Latest Essays</h2>
-        <p>Substack-style long-form writing hosted on this site.</p>
+      <div class="section-header"><h2>Selected publications</h2></div>
+      <div class="publication-list">
+        {% assign selected = site.publications | where: "selected", true | sort: "year" | reverse %}
+        {% for item in selected %}{% include publication_item.html item=item %}{% endfor %}
       </div>
-      <div class="post-list">
-        {% for post in site.posts limit:3 %}
-        <article class="post-preview">
-          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-          <div class="meta">{{ post.date | date: "%B %d, %Y" }}</div>
-          <p>{{ post.excerpt | strip_html | truncate: 180 }}</p>
-        </article>
-        {% else %}
-        <p>No essays yet.</p>
+      <p><a href="{{ '/publications/' | relative_url }}">All publications &rarr;</a></p>
+    </div>
+    <div>
+      <div class="section-header"><h2>News</h2></div>
+      <ul class="news">
+        {% for n in site.data.home.news %}
+        <li><span class="news-date">{{ n.date }}</span>{{ n.text }}</li>
         {% endfor %}
-      </div>
-    </div>
-
-    {% include newsletter.html %}
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-header">
-      <h2>Selected Publications</h2>
-      <p>Articles, chapters, public writing, and major academic projects.</p>
-    </div>
-    <div class="publication-list">
-      {% assign selected_publications = site.publications | where: "selected", true | sort: "year" | reverse %}
-      {% for item in selected_publications limit:3 %}
-      <article class="publication-item">
-        <h3>{{ item.title }}</h3>
-        <div class="meta">{{ item.authors }}{% if item.venue %}, {{ item.venue }}{% endif %}{% if item.year %}, {{ item.year }}{% endif %}</div>
-        {% if item.content %}<p>{{ item.content | strip_html | truncate: 220 }}</p>{% endif %}
-        <div class="link-list">
-          {% if item.external_url %}<a href="{{ item.external_url }}">Read online</a>{% endif %}
-          {% if item.pdf %}<a href="{{ item.pdf | relative_url }}">PDF</a>{% endif %}
-        </div>
-      </article>
-      {% endfor %}
+      </ul>
+      {% include newsletter.html %}
     </div>
   </div>
 </section>

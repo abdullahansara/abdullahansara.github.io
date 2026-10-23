@@ -1,7 +1,7 @@
 ---
 title: "Remembrance and Limitation: Oral Traditions, Memory and Verbatim Recall in Early Islam"
 authors: "Abdullah Ansar"
-year:
+year: ""
 venue: "Carleton Comprehensive Project; Final Year Thesis in Cognitive Science"
 type: "Thesis"
 selected: false
