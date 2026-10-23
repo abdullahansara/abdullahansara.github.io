@@ -35,6 +35,22 @@ description: "Abdullah Ansar: research on Qur'anic orality and memory, early Shi
 </section>
 
 <section class="section">
+  <div class="container">
+    <div class="section-header"><h2>Latest writing</h2><p>From <em>Naẓar-i Ishrāqī</em>.</p></div>
+    <div class="post-list">
+      {% for post in site.posts limit:3 %}
+      <article class="post-preview">
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <div class="meta">{{ post.date | date: "%B %-d, %Y" }}</div>
+        <p>{{ post.subtitle | default: post.excerpt | strip_html | truncate: 180 }}</p>
+      </article>
+      {% endfor %}
+    </div>
+    <p><a href="{{ '/blog/' | relative_url }}">All writing &rarr;</a></p>
+  </div>
+</section>
+
+<section class="section">
   <div class="container two-col">
     <div>
       <div class="section-header"><h2>Selected publications</h2></div>
