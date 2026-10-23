@@ -14,11 +14,11 @@ description: "Peer-reviewed articles, reviews, public scholarship, and theses by
 
 <section class="section">
   <div class="container readable-wide">
-    {% assign groups = "Article,Book Chapter,Book Review,Public Essay,Thesis" | split: "," %}
+    {% assign groups = "Article,Working Paper,Conference Paper,Book Review,Book Chapter,Public Essay,Resource,Thesis" | split: "," %}
     {% for g in groups %}
       {% assign items = all | where: "type", g %}
       {% if items.size > 0 %}
-      <h2 class="group-title">{% case g %}{% when "Article" %}Peer-reviewed articles{% when "Book Chapter" %}Book chapters (research assistance){% when "Book Review" %}Reviews{% when "Public Essay" %}Public scholarship{% when "Thesis" %}Theses{% endcase %}</h2>
+      <h2 class="group-title">{% case g %}{% when "Article" %}Peer-reviewed articles{% when "Working Paper" %}Working papers and drafts{% when "Conference Paper" %}Conference presentations{% when "Resource" %}Resources{% when "Book Chapter" %}Book chapters (research assistance){% when "Book Review" %}Reviews{% when "Public Essay" %}Public scholarship{% when "Thesis" %}Theses{% endcase %}</h2>
       <div class="publication-list">
         {% for item in items %}{% include publication_item.html item=item %}{% endfor %}
       </div>

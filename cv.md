@@ -18,6 +18,8 @@ description: "Curriculum vitae of Abdullah Ansar: education, publications, talks
 
     <h2>Education</h2>
     <dl class="cv-list">
+      <dt>Current</dt>
+      <dd><strong>Divinity School, University of Chicago</strong>.</dd>
       <dt>B.A.</dt>
       <dd><strong>Carleton College</strong>, Philosophy and Cognitive Science, with additional work in religion, Arabic, and Middle Eastern studies.<br>
       Comprehensive projects: <em>The Jurist Par Excellence: Debating Khomeini's Political Thought and Its Philosophical Roots</em> (Philosophy); <em>Remembrance and Limitation: Oral Traditions, Memory and Verbatim Recall in Early Islam</em> (Cognitive Science).</dd>
@@ -28,17 +30,24 @@ description: "Curriculum vitae of Abdullah Ansar: education, publications, talks
     <h2>Publications</h2>
     <ul class="cv-pubs">
       {% assign all = site.publications | sort: "year" | reverse %}
-      {% for item in all %}{% unless item.type == "Thesis" %}
-      <li>{{ item.authors }}. {% if item.type == "Book Review" %}Review{% else %}&ldquo;{{ item.title }}&rdquo;{% endif %} <em>{{ item.venue }}</em>{% if item.year and item.year != "" %} ({{ item.year }}){% endif %}.</li>
+      {% assign skip = "Thesis,Conference Paper,Resource" | split: "," %}
+      {% for item in all %}{% unless skip contains item.type %}
+      <li>{{ item.authors }}. {% if item.type == "Book Review" %}{{ item.title }}.{% else %}&ldquo;{{ item.title }}&rdquo;{% endif %} <em>{{ item.venue }}</em>{% if item.year and item.year != "" %} ({{ item.year }}){% endif %}.</li>
       {% endunless %}{% endfor %}
     </ul>
 
-    <h2>Talks and presentations</h2>
+    <h2>Conference presentations</h2>
     <dl class="cv-list">
       <dt>2026</dt>
+      <dd>&ldquo;The Docetic Doctrine and the Image of the Imām in Early Ghūlāt Literature.&rdquo; <em>Esoteric Currents and Intellectual Tensions: The Ghūlāt in Formative Shiism</em>.</dd>
+      <dt>2026</dt>
+      <dd>&ldquo;Applying ICMA to Shiʿi Traditions: Reconstructing the Imām's Hypomnēma.&rdquo; Annual Shīʿī Studies Conference.</dd>
+      <dt>2026</dt>
       <dd>&ldquo;The 'in-between' of brain, being, and faith: Metaxy, Islamic thought, and the neuroscience of liminal consciousness.&rdquo; Faith Across Fields, Spiritual Life Office, University of Chicago, 21 October.</dd>
-      <dt>Earlier</dt>
-      <dd>International Qur'anic Studies Association (IQSA) annual meeting; American Academy of Religion annual meeting.</dd>
+      <dt>2024</dt>
+      <dd>&ldquo;The Tripartite Basmala.&rdquo; International Qurʾanic Studies Association (IQSA).</dd>
+      <dt>n.d.</dt>
+      <dd>&ldquo;The Proto-Uṣūlī: Legal Language and Meaning in Formative Shīʿism.&rdquo;</dd>
     </dl>
 
     <h2>Experience</h2>

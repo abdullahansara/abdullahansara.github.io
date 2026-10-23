@@ -7,7 +7,7 @@ type: "Article"
 selected: false
 external_url:
 pdf:
-doi:
+doi: "10.1111/ZYGO.12926"
 ---
 
-Article on the concept of insan in Twelver Shi'i philosophy and its implications for astrotheology.
+Explores the human (insān) in Twelver Shīʿī philosophy and mysticism, the archetype of the Perfect Human, and whether "human" can describe other intelligent beings with similar ontological features.

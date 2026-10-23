@@ -10,4 +10,4 @@ pdf:
 doi:
 ---
 
-Public-facing reflection published by HMML Stories.
+On the <em>Kishan Gītā</em>, an early modern Urdu text by Sayyid Amīn that presents Hinduism and Islam as sharing an esoteric unity.
