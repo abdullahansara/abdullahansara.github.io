@@ -38,5 +38,4 @@ exclude:
   - .neon
   - src
   - scripts
-  - public
   - node_modules
